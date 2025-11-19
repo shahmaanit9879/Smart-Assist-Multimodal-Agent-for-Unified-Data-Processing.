@@ -1,6 +1,11 @@
 from agents import TextAgent, ImageAgent, MultiModalAgent
 
 class SmartAssistAI:
+    def safe_execute(self, func, *args):
+    try:
+        return func(*args)
+    except Exception as e:
+        return {"error": str(e)}
     def __init__(self):
         self.text_agent = TextAgent()
         self.image_agent = ImageAgent()
