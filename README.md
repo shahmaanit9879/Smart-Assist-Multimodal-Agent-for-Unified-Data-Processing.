@@ -112,3 +112,6 @@ MIT License – free for academic and research use.
 - OpenAI ecosystem  
 - Streamlit community  
 - Python open-source contributors
+- To run the project:
+
+python main.py
