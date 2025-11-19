@@ -2,15 +2,25 @@ from agents import CoordinatorAgent
 from logger import log_event
 from a2a_protocol import A2AProtocol
 
-agent = CoordinatorAgent()
-protocol = A2AProtocol()
+def run():
+    log_event("System started")
 
-log_event("System started")
+    coordinator = CoordinatorAgent()
+    a2a = A2AProtocol()
 
-text_output = agent.route("This is an example text")
-log_event(f"TextAgent Output: {text_output}")
+    # Example text processing
+    result_text = coordinator.route("This is a sample text")
+    print("TEXT RESULT:", result_text)
+    log_event(f"TextAgent Output: {result_text}")
 
-protocol.send("Coordinator", "TextAgent", "Summarize this text")
+    # Example A2A message
+    msg = a2a.send("Coordinator", "TextAgent", "Summarize this text")
+    print("A2A MESSAGE:", msg)
 
-image_output = agent.route("example_image.png")
-log_event(f"ImageAgent Output: {image_output}")
+    # Example image
+    result_img = coordinator.route("example_image.png")
+    print("IMAGE RESULT:", result_img)
+    log_event(f"ImageAgent Output: {result_img}")
+
+if __name__ == "__main__":
+    run()
