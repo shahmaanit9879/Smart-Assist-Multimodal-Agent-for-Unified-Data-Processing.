@@ -1,13 +1,8 @@
-# Contributing Guide
+# Contributing
 
-## How to Fork
-1. Go to the repo
-2. Click **Fork** (top-right)
+1. Fork the repo (top-right Fork button)
+2. Create a branch: feature/your-change
+3. Make changes and commit
+4. Push and open a Pull Request
 
-## How to Send Changes
-1. Clone the fork
-2. Create a branch
-3. Commit
-4. Make Pull Request
-
-Everyone can contribute!
+If you add new features, add small tests under tests/
