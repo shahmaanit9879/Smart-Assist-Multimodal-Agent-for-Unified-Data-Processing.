@@ -1,26 +1,8 @@
-from src.assistant import SmartAssistAI
+from src.text_agent import handle_text
+from src.image_agent import handle_image
+from src.audio_agent import handle_audio
 
-def main():
-    ai = SmartAssistAI()
+print("Smart Assist Running!")
 
-    print("1. Text")
-    print("2. Image")
-    print("3. Multimodal")
-
-    ch = input("Choose: ")
-
-    if ch == "1":
-        t = input("Enter text: ")
-        print(ai.text(t))
-
-    elif ch == "2":
-        img = input("Enter image path: ")
-        print(ai.image(img))
-
-    elif ch == "3":
-        t = input("Enter text: ")
-        img = input("Enter image path: ")
-        print(ai.multimodal(t, img))
-
-if __name__ == "__main__":
-    main()
+# Example run
+print(handle_text("Hello Smart Assist"))
